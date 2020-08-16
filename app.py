@@ -53,7 +53,7 @@ def calculate():
             ctc ='CTC : {}'.format(round(ctc)),
             basic ='Basic : {}  ₹'.format(round(basic)),
             hra ='HRA : {}  ₹'.format(round(hra)),
-            conveyance ='Conveyance/Travel [9.62 %] : {}  ₹'.format(round(conveyance)),
+            conveyance ='Conveyance/Travel : {}  ₹'.format(round(conveyance)),
             eps ='EPS : {}'.format(round(eps)),
             epf_employer ='EPF Employer : {}  ₹'.format(round(epf_employer)),
             pf_employee ='PF Employee : {}  ₹'.format(round(pf_employee)),
