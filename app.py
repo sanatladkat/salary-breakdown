@@ -13,7 +13,7 @@ def calculate():
     ctc = request.form.get ("ctc")
     ctc = int(ctc)
 
-    basic = (50 * ctc)/100
+    basic = (50 * ctc)/100 #50% of ctc
     basic_mod = basic 
     if basic_mod >= 15000:
         basic_mod = 15000
@@ -32,12 +32,12 @@ def calculate():
 
         return render_template('index.html', 
         ctc ='CTC : {}'.format(round(ctc)),
-        basic ='Basic [50 %] : {}  ₹'.format(round(basic)),
-        hra ='HRA [25 %] : {}  ₹'.format(round(hra)),
-        conveyance ='Conveyance/Travel [9.62 %] : {}  ₹'.format(round(conveyance)),
-        eps ='EPS [8.33 %] : {}'.format(round(eps)),
-        epf_employer ='EPF Employer [8.33 %] : {}  ₹'.format(round(epf_employer)),
-        pf_employee ='PF Employee [12 %] : {}  ₹'.format(round(pf_employee)),
+        basic ='Basic : {}  ₹'.format(round(basic)),
+        hra ='HRA : {}  ₹'.format(round(hra)),
+        conveyance ='Conveyance/Travel : {}  ₹'.format(round(conveyance)),
+        eps ='EPS : {}'.format(round(eps)),
+        epf_employer ='EPF Employer : {}  ₹'.format(round(epf_employer)),
+        pf_employee ='PF Employee : {}  ₹'.format(round(pf_employee)),
         total='Total : {}  ₹'.format(round(total))
         
         )
@@ -51,14 +51,14 @@ def calculate():
 
             return render_template('index.html', 
             ctc ='CTC : {}'.format(round(ctc)),
-            basic ='Basic [50 %] : {}  ₹'.format(round(basic)),
-            hra ='HRA [25 %] : {}  ₹'.format(round(hra)),
+            basic ='Basic : {}  ₹'.format(round(basic)),
+            hra ='HRA : {}  ₹'.format(round(hra)),
             conveyance ='Conveyance/Travel [9.62 %] : {}  ₹'.format(round(conveyance)),
-            eps ='EPS [8.33 %] : {}'.format(round(eps)),
-            epf_employer ='EPF Employer [8.33 %] : {}  ₹'.format(round(epf_employer)),
-            pf_employee ='PF Employee [12 %] : {}  ₹'.format(round(pf_employee)),
-            esi_employer ='ESI Employer [3.25%] : {}  ₹'.format(round(esi_employer)),
-            esi_employee ='ESI Employee [0.75 %] : {}  ₹'.format(round(esi_employee)),
+            eps ='EPS : {}'.format(round(eps)),
+            epf_employer ='EPF Employer : {}  ₹'.format(round(epf_employer)),
+            pf_employee ='PF Employee : {}  ₹'.format(round(pf_employee)),
+            esi_employer ='ESI Employer : {}  ₹'.format(round(esi_employer)),
+            esi_employee ='ESI Employee : {}  ₹'.format(round(esi_employee)),
             total='Total : {}  ₹'.format(round(total))
             )
 
