@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Breakdown</title>
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+
+</head>
+
+<body>
+
+    <h1>Salary Breakdown</h1><br><br><br>
+
+    <div>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('calculate')}}" method="POST" autocomplete="on">
+
+            <h3> <strong>Enter CTC</strong></h3>
+            <p><input type="number" name="ctc" required min="0"></p><br>
+
+            <p><button type="submit" class="btn btn-primary btn-block btn-large">Calculate Salary Breakdown</button></p>
+        </form>
+    </div>
+
+    <h4>{{ ctc }}</h4>
+    <h4>{{ basic }}</h4>
+    <h4>{{ hra }}</h4>
+    <h4>{{ conveyance }}</h4>
+    <h4>{{ eps }}</h4>
+    <h4>{{ epf_employer }}</h4>
+    <h4>{{ pf_employee }}</h4>
+    <h4>{{ esi_employer }}</h4>
+    <h4>{{ esi_employee }}</h4>
+    <h4>{{ total }}</h4>
+
+</body>
+
+</html>
